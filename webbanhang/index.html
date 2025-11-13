@@ -1,1 +1,38 @@
-<html><h1>Xin chào</h1></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet"  type="text/css" href="index.css">
+<link rel="icon" type="image/x-icon" href="https://cdn.haitrieu.com/wp-content/uploads/2022/03/Logo-Bach-Hoa-Xanh-V.png">
+<h1>Bách Hóa Xanh</h1>
+</head>
+<body style="background-color: azure;">
+<p>Chào mừng bạn đến với trang web bán hàng Bách Hóa Xanh!</p>
+<a href="https://www.bachhoaxanh.com/">Xem sản phẩm</a><br>
+<div class="mycontainer"> 
+    <div class="myitem" style="background-color: rgb(232, 231, 233);">
+    <p>Sản phẩm 1</p>
+    </div>
+    <div class="myitem" style="background-color: rgb(162, 159, 156);">
+    <p>Sản phẩm 2</p>
+    </div>
+    <div class="myitem" style="background-color: rgb(130, 130, 127);">
+    <p>Sản phẩm 3</p>
+    </div>
+ </div>
+<br>
+<hr>
+<p>Liên hệ với chúng tôi qua email: mrhonghat@gmail.com</p>
+<pre>Điện thoại: 0123456789</pre>
+<script>
+    function mySanphamFunction() {
+        var x=document.getElementsByClassName("myitem");
+        for (var i=0; i<x.length; i++) {
+            alert("Bạn đang chọn sản phẩm " + (i+1));
+        }
+        
+    }
+</script>
+</body>
+</html>
