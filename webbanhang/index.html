@@ -1,37 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--html5-->
 <html>
 <head>
-<title>Trang chủ</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"  type="text/css" href="index.css">
-<link rel="icon" type="image/x-icon" href="https://cdn.haitrieu.com/wp-content/uploads/2022/03/Logo-Bach-Hoa-Xanh-V.png">
-<h1>Bách Hóa Xanh</h1>
+<title>Trang chủ</title><!--Tiêu đề trang-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--Cài font unicode-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Cài đặt hiển thị trên di động-->
+<link rel="stylesheet"  type="text/css" href="index.css"><!--Cài css-->
+<link rel="icon" type="image/x-icon" href=""><!--Đưa icon và link file-->
 </head>
-<body style="background-color: azure;">
-<p>Chào mừng bạn đến với trang web bán hàng Bách Hóa Xanh!</p>
+<body style="background-color: rgb(254, 254, 253);">
+<header  class="header">
+<h1>Bách Hóa Trắng</h1>
+<ul>
+    <li><a href="demo_iframe.htm">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li><a href="#">Liên hệ</a></li>
+</ul>
+</header>
+<section  class="section">
+<p>Chào mừng bạn đến với trang web bán hàng Bách Hóa Trắng. Với mục đích ôn tập Html, CSS, JavaScript!</p>
 <a href="https://www.bachhoaxanh.com/">Xem sản phẩm</a><br>
+ <!--Test css class, class có thể lặp lại-->
 <div class="mycontainer"> 
-    <div class="myitem" style="background-color: rgb(232, 231, 233);">
+    <div class="myitem" style="background-color: rgb(251, 250, 253);" onclick="mySanphamFunction(0)">
     <p>Sản phẩm 1</p>
     </div>
-    <div class="myitem" style="background-color: rgb(162, 159, 156);">
+    <div class="myitem" style="background-color: rgb(251, 250, 249);"onclick="mySanphamFunction(1)">
     <p>Sản phẩm 2</p>
     </div>
-    <div class="myitem" style="background-color: rgb(130, 130, 127);">
+    <div class="myitem" style="background-color: rgb(250, 250, 245);" onclick="mySanphamFunction(2)">
     <p>Sản phẩm 3</p>
     </div>
  </div>
-<br>
+ <!--Test css id, id là duy nhất-->
+ <div id="test">
+    <p>Đây là đoạn test id</p>
+ </div>
+<form action="/action_page.php">
+  <label for="fname">Họ:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Tên:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="submit" value="Gửi">
+</form>
+
+
+
+
+<!--Nhúng-->
+<iframe src="./demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+<p><a href="https://www.bachhoaxanh.com/">Đây là trang bên ngoài</a></p>
+</section>
+<!--Phân trang có đường gạch ngang thì dùng hr-->
+<footer class="footer">
 <hr>
 <p>Liên hệ với chúng tôi qua email: mrhonghat@gmail.com</p>
 <pre>Điện thoại: 0123456789</pre>
+</footer>
+<!--Ví dụ sử dụng JavaScript-->
 <script>
-    function mySanphamFunction() {
-        var x=document.getElementsByClassName("myitem");
-        for (var i=0; i<x.length; i++) {
-            alert("Bạn đang chọn sản phẩm " + (i+1));
-        }
-        
+    function mySanphamFunction(index) {
+        alert("Bạn đang chọn sản phẩm " + (index+1));
     }
 </script>
 </body>
